@@ -1,0 +1,268 @@
+:root {
+  --crema: #fafbe4;
+  --celeste: #5c84b3;
+  --azul: #183055;
+  --oscuro-azul: #0b1726;
+}
+
+.shrikhand-regular {
+  font-family: "Shrikhand", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.libre-baskerville-regular {
+  font-family: "Libre Baskerville", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+h3 {
+  text-align: center;
+}
+
+h2 {
+  text-align: center;
+  font-family: "Libre Baskerville", serif;
+  font-size: 24px;
+}
+
+h1 {
+  text-align: center;
+  font-family: "Shrikhand", serif;
+  font-size: 40px;
+}
+
+p {
+  text-align: center;
+  font-family: "Libre Baskerville", serif;
+  font-size: 16px;
+}
+
+body {
+  background-color: var(--crema);
+}
+
+main {
+  display: flex; /* activa flexbox */
+  flex-direction: column; /* apila todos los hijos verticalmente */
+  justify-content: center; /* centra verticalmente todo el contenido */
+  align-items: center; /* centra horizontalmente */
+  box-sizing: border-box; /* incluye padding en la altura */
+  text-align: center; /* centra el texto dentro de los bloques */
+  margin-bottom: 38px;
+}
+
+.principal {
+  color: var(--crema);
+  background-color: var(--azul);
+  width: 100%;
+  padding: 30px;
+  height: 150px;
+  text-align: center;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  gap: 50px; /* espacio entre los bloques */
+  justify-content: center; /* centra los bloques horizontalmente */
+  flex-wrap: wrap; /* permite que bajen a otra línea si no caben */
+  margin-top: 50px;
+  width: 100%; /* asegura que el contenedor no se salga del main */
+  box-sizing: border-box; /* incluye padding/borde en el cálculo */
+}
+
+.custom-content {
+  border: 5px solid var(--oscuro-azul);
+  padding: 30px;
+  border-radius: 20px;
+  width: 100%; /* ancho completo dentro del flex-wrap */
+  max-width: 500px; /* limita el ancho para que no se sobrepase */
+  box-sizing: border-box; /* importante para que padding+borde no aumenten ancho */
+  text-align: justify; /* justifica el texto */
+}
+
+.custom-content:hover {
+  box-shadow: 20px 20px 50px grey;
+}
+
+.fila {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 38px;
+}
+
+.fila div {
+  background-color: var(--celeste);
+  width: 500px;
+  padding: 10px;
+  height: 170px;
+  text-align: center;
+  border-radius: 20px;
+}
+
+.columnas {
+  display: flex;
+  flex-direction: column;
+  margin-top: 38px;
+  align-items: center;
+  justify-content: center;
+}
+
+.columnas div {
+  background-color: var(--celeste);
+  justify-content: center;
+  width: 500px;
+  padding: 10px;
+  height: 150px;
+  text-align: center;
+  border-radius: 20px;
+}
+
+.logros {
+  margin-top: 38px;
+}
+
+.todos {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-bottom: 38px;
+}
+
+.grande {
+  width: 45%;
+  max-width: 500px;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.chiquitos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 45%;
+  max-width: 700px;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+.chiquitos div {
+  border: 5px solid var(--oscuro-azul);
+  border-radius: 20px;
+  text-align: center;
+  width: 250px;
+  height: 180px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  margin-right: 20px;
+}
+
+.logo img {
+  border: none;
+}
+
+img {
+  width: 200px;
+  display: block;
+  margin: 0 auto;
+  border: 7px solid var(--azul);
+}
+
+.row div {
+  text-align: justify;
+}
+
+@media only screen and (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+
+  main {
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+
+  .fila {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .columnas div {
+    height: 130px;
+  }
+
+  .todos {
+    flex-direction: column;
+  }
+
+  .grande {
+    height: 150px;
+    width: 100%;
+  }
+
+  img {
+    width: 150px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  html {
+    font-size: 13px;
+  }
+
+  main {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .flex-container {
+    flex-direction: column;
+  }
+
+  .puro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    margin: 0 auto;
+  }
+
+  .fila {
+    flex-direction: column;
+  }
+
+  .fila div {
+    width: 300px;
+  }
+
+  .columnas div {
+    width: 300px;
+    height: 200px;
+  }
+
+  .grande {
+    width: 350px;
+    height: 150px;
+  }
+
+  .chiquitos {
+    width: 350px;
+  }
+
+  img {
+    max-width: 90%;
+  }
+}
