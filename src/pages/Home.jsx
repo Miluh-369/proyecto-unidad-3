@@ -1,4 +1,5 @@
 import "../assets/css/Home.css";
+import imageninicio from "../assets/image/imageninicio.jpg";
 import React from "react";
 
 export default function Home() {
@@ -29,10 +30,7 @@ export default function Home() {
 
         <section className="info">
           <div className="mainimg">
-            <img
-              src="./assets/image/imagen de inicio.jpg"
-              alt="imagen relacionada a la salud"
-            />
+            <img src={imageninicio} alt="imagen relacionada a la salud" />
           </div>
 
           <div className="texto">
