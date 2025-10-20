@@ -1,4 +1,5 @@
 import "../assets/css/Header.css";
+import logo from "../assets/image/logo.png";
 import { Link } from "react-router-dom";
 
 export default function Header() {
@@ -7,7 +8,7 @@ export default function Header() {
       <nav>
         <div className="logo">
           <a href="./index.html">
-            <img src="./assets/image/logo.png" alt="Logo de Healthify" />
+            <img src={logo} alt="Logo de Healthify" />
           </a>
         </div>
 
