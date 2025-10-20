@@ -1,3 +1,4 @@
+import "../assets/css/Home.css";
 import React from "react";
 
 export default function Home() {
