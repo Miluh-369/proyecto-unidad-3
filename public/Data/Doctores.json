@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "Dr. Luis Fernández",
+    "Disponibe": true,
+    "rating": 4.7,
+    "description": "Cirujano general con amplia experiencia en procedimientos laparoscópicos y emergencias quirúrgicas.",
+    "brand": "Clínica Anglo Americana"
+  },
+  {
+    "id": 2,
+    "name": "Dra. Belen Suarez",
+    "Disponible": true,
+    "rating": 4.9,
+    "description": "Pediatra especializada en el desarrollo infantil y cuidado integral de niños y adolescentes.",
+    "brand": "Clínica Internacional"
+  },
+  {
+    "id": 3,
+    "name": "Dra. Camila Herrera",
+    "Disponible": false,
+    "rating": 4.8,
+    "description": "Cardióloga enfocada en prevención, diagnóstico y tratamiento de enfermedades cardiovasculares.",
+    "brand": "Hospital Nacional Edgardo Rebagliati"
+  }
+]
