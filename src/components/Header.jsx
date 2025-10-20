@@ -1,22 +1,36 @@
+import "../assets/css/Header.css";
 import { Link } from "react-router-dom";
 
 export default function Header() {
   return (
-    <header style={{ background: "#111", color: "white", padding: "1rem" }}>
-      <h1>JELTIFY</h1>
+    <header>
       <nav>
-        <ul style={{ display: "flex", gap: "1rem", listStyle: "none" }}>
+        <div className="logo">
+          <a href="./index.html">
+            <img src="./assets/image/logo.png" alt="Logo de Healthify" />
+          </a>
+        </div>
+
+        <ul className="links">
           <li>
-            <Link to="/">Inicio</Link>
+            <a className="link" href="./index.html">
+              Inicio{" "}
+            </a>
           </li>
           <li>
-            <Link to="/somos">Quiénes somos</Link>
+            <a className="link" href="./assets/html/somos.html">
+              Quiénes somos{" "}
+            </a>
           </li>
           <li>
-            <Link to="/mision">Misión y Visión</Link>
+            <a className="link" href="./assets/html/misionyvision.html">
+              Misión y Visión{" "}
+            </a>
           </li>
           <li>
-            <Link to="/contacto">Contacto</Link>
+            <a className="link" href="./assets/html/contactos.html">
+              Contacto{" "}
+            </a>
           </li>
         </ul>
       </nav>
