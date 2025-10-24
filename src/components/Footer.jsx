@@ -1,43 +1,44 @@
 import "../assets/css/Footer.css";
+import { Link } from "react-router-dom";
 import React from "react";
 
 export default function Footer() {
   return (
-    <footer class="footer">
-      <div class="footer-container">
-        <div class="footer-brand">
+    <footer className="footer">
+      <div className="footer-container">
+        <div className="footer-brand">
           <h3>JELTIFY</h3>
           <p>Conectando tu salud con un clic</p>
         </div>
 
-        <div class="footer-links">
+        <div className="footer-links">
           <h4>Enlaces</h4>
-          <a href="#">Inicio</a>
-          <a href="#">Quiénes somos</a>
-          <a href="#">Mision y Vision</a>
-          <a href="#">Contacto</a>
+          <Link to="/">Inicio</Link>
+          <Link to="/somos">Quiénes somos</Link>
+          <Link to="/mision">Misión y Visión</Link>
+          <Link to="/contacto">Contacto</Link>
         </div>
 
-        <div class="footer-contact">
+        <div className="footer-contact">
           <h4>Contacto</h4>
           <p>
-            <a href="healthify@telemedicina.com">
+            <a href="mailto:healthify@telemedicina.com">
               📧 healthify@telemedicina.com
             </a>
           </p>
           <p>
-            <a href="tel: +51 922-384-589">📞 +51 922-384-589</a>
+            <a href="tel:+51922384589">📞 +51 922-384-589</a>
           </p>
         </div>
 
-        <div class="footer-legal">
+        <div className="footer-legal">
           <h4>Legal</h4>
           <a href="#">Política de privacidad</a>
           <a href="#">Términos y condiciones</a>
         </div>
       </div>
 
-      <div class="footer-bottom">
+      <div className="footer-bottom">
         <p>© 2025 Jeltify. Todos los derechos reservados.</p>
       </div>
     </footer>

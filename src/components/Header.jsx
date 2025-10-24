@@ -7,31 +7,32 @@ export default function Header() {
     <header>
       <nav>
         <div className="logo">
-          <a href="./index.html">
+          {/* Cambié el <a> por Link */}
+          <Link to="/">
             <img src={logo} alt="Logo de Healthify" />
-          </a>
+          </Link>
         </div>
 
         <ul className="links">
           <li>
-            <a className="link" href="../assets/pages/Home.jsx">
-              Inicio{" "}
-            </a>
+            <Link className="link" to="/">
+              Inicio
+            </Link>
           </li>
           <li>
-            <a className="link" href="./assets/pages/somos.jsx">
-              Quiénes somos{" "}
-            </a>
+            <Link className="link" to="/somos">
+              Quiénes somos
+            </Link>
           </li>
           <li>
-            <a className="link" href="./assets/pages/mision.jsx">
-              Misión y Visión{" "}
-            </a>
+            <Link className="link" to="/mision">
+              Misión y Visión
+            </Link>
           </li>
           <li>
-            <a className="link" href="./assets/pages/contacto.jsx">
-              Contacto{" "}
-            </a>
+            <Link className="link" to="/contacto">
+              Contacto
+            </Link>
           </li>
         </ul>
       </nav>
