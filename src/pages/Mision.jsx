@@ -1,5 +1,5 @@
 import React from "react";
-import "../assets/css/Mision.css";
+import "../assets/css/misionyvisi.css";
 import mujerImg from "../assets/image/mujer.png";
 import doctorImg from "../assets/image/doctor.png";
 import señoraImg from "../assets/image/seciora.png";
