@@ -1,0 +1,264 @@
+:root {
+  --crema: #fafbe4;
+  --celeste: #5c84b3;
+  --azul: #183055;
+  --oscuro-azul: #0b1726;
+}
+
+.shrikhand-regular {
+  font-family: "Shrikhand", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.libre-baskerville-regular {
+  font-family: "Libre Baskerville", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  background-color: var(--crema);
+  text-align: center;
+}
+
+h2 {
+  text-align: center;
+  font-family: "Libre Baskerville", serif;
+  font-size: 24px;
+}
+
+h1 {
+  text-align: center;
+  font-family: "Shrikhand", serif;
+  font-size: 40px;
+}
+
+main h1 {
+  text-align: center;
+  font-family: "Shrikhand", serif;
+  font-size: 40px;
+  margin-top: 38px;
+}
+
+p {
+  text-align: center;
+  font-family: "Libre Baskerville", serif;
+  font-size: 16px;
+}
+
+.principal {
+  color: var(--crema);
+  background-color: var(--azul);
+  width: 100%;
+  padding: 30px;
+  height: 150px;
+  text-align: center;
+  margin: 0;
+}
+
+.contenedor {
+  border: 5px solid var(--oscuro-azul);
+  border-radius: 10px;
+  box-shadow: 0 0 10px var(--azul);
+  margin: 48px 149px;
+  padding-bottom: 38px;
+}
+
+label {
+  display: flex;
+  justify-content: left;
+  font-family: "Libre Baskerville", serif;
+  padding: 10px;
+}
+
+input,
+textarea {
+  width: 65%;
+  padding: 10px;
+  border: 1px solid var(--crema);
+  box-sizing: border-box;
+  display: inline-block;
+}
+
+@media (min-width: 1200px) {
+  .contenedor {
+    width: 80%;
+    margin: 40px auto;
+  }
+}
+
+@media (max-width: 1199px) and (min-width: 768px) {
+  .contenedor {
+    width: 90%;
+    margin: 20px auto;
+  }
+}
+
+@media (max-width: 767px) {
+  .contenedor {
+    width: 100%;
+    margin: 10px auto;
+  }
+}
+
+.h1, h2, h3, h4 {
+  font-family: serif, sans-serif, Lucida;
+  color: var(--oscuro-azul);
+  text-align: center;
+  margin: 30px;
+  margin-bottom: 20px;
+}
+
+button {
+  background-color: var(--celeste);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: inline-block;
+  font-size: 20px;
+  border-radius: 10px;
+}
+
+div {
+  text-align: center;
+  margin: 20px;
+  margin-bottom: 20px;
+}
+
+.instagram {
+  background-color: #e1306c;
+  color: var(--crema);
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.facebook {
+  background-color: #303686;
+  color: var(--crema);
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.youtube {
+  background-color: #9c1212;
+  color: var(--crema);
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.tiktok {
+  background-color: black;
+  color: var(--crema);
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.twitter {
+  background-color: skyblue;
+  color: var(--crema);
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.linkedin {
+  background-color: blue;
+  color: var(--crema);
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.principal {
+  color: var(--crema);
+  background-color: var(--azul);
+  width: 100%;
+  padding: 30px;
+  height: 150px;
+  text-align: center;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  margin-top: 50px;
+  gap: 50px;
+  text-align: justify;
+  justify-content: space-between;
+}
+
+.shrikhand-regular {
+  font-family: "Shrikhand", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+#consultaform {
+  background-color: var(--celeste);
+  padding: 20px;
+  margin: 0 200px;
+  border-radius: 5px;
+}
+
+.form-container {
+  background-color: #fff;
+  padding: 30px 40px;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+button:hover {
+  background-color: var(--azul);
+}
+
+#resultado {
+  margin-top: 20px;
+  font-weight: bold;
+  color: green;
+  text-align: center;
+}
+
+@media (max-width: 1199px) and (min-width: 768px) {
+  .contenedor {
+    width: 90%;
+    margin: 20px auto;
+  }
+}
+
+@media (max-width: 767px) {
+  .contenedor {
+    width: 100%;
+    margin: 10px auto;
+  }
+}

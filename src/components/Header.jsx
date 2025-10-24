@@ -14,22 +14,22 @@ export default function Header() {
 
         <ul className="links">
           <li>
-            <a className="link" href="./index.html">
+            <a className="link" href="../assets/pages/Home.jsx">
               Inicio{" "}
             </a>
           </li>
           <li>
-            <a className="link" href="./assets/html/somos.html">
+            <a className="link" href="./assets/pages/somos.jsx">
               Quiénes somos{" "}
             </a>
           </li>
           <li>
-            <a className="link" href="./assets/html/misionyvision.html">
+            <a className="link" href="./assets/pages/mision.jsx">
               Misión y Visión{" "}
             </a>
           </li>
           <li>
-            <a className="link" href="./assets/html/contactos.html">
+            <a className="link" href="./assets/pages/contacto.jsx">
               Contacto{" "}
             </a>
           </li>

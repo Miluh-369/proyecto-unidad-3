@@ -1,18 +1,27 @@
-import Footer from "./components/Footer";
-import Header from "./components/Header";
-import Home from "./pages/Home";
-import Mision from "./pages/Mision";
-import Somos from "./pages/Somos";
-import Contacto from "./pages/Contacto";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Header from "./Header";
+import Footer from "./Footer";
+import Home from "./Home";
+import Somos from "./Somos";
+import Mision from "./Mision";
+import Contacto from "./Contacto";
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
+    <Router>
+      {/* Header fijo arriba */}
       <Header />
-      <Home />
+
+      {/* Aquí cambian las páginas */}
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/somos" element={<Somos />} />
+        <Route path="/mision" element={<Mision />} />
+        <Route path="/contacto" element={<Contacto />} />
+      </Routes>
+
+      {/* Footer fijo abajo */}
       <Footer />
-    </div>
+    </Router>
   );
 }
-
-export default App;
