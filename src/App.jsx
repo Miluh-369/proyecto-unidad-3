@@ -6,19 +6,19 @@ import Home from "./pages/Home";
 import Somos from "./pages/Somos";
 import Mision from "./pages/Mision";
 import Contacto from "./pages/Contacto";
+import Galeria from "./components/galeria"; // 👈 nuevo import
 
 export default function App() {
   return (
     <Router>
       <Header />
-
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/somos" element={<Somos />} />
         <Route path="/mision" element={<Mision />} />
         <Route path="/contacto" element={<Contacto />} />
+        <Route path="/galeria" element={<Galeria />} /> {/* 👈 nueva ruta */}
       </Routes>
-
       <Footer />
     </Router>
   );

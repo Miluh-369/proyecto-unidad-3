@@ -298,3 +298,19 @@ button {
     align-items: center;
   }
 }
+.btn-galeria {
+  background-color: #065580;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 12px 24px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-top: 15px;
+}
+
+.btn-galeria:hover {
+  background-color: #023e8a;
+  transform: scale(1.05);
+}

@@ -1,0 +1,8 @@
+[
+  { "id": 1, "src": "../assets/image/cardiologa.jpg", "alt": "Cardióloga", "titulo": "Cardióloga" },
+  { "id": 2, "src": "../assets/image/cirujano general.jpg", "alt": "Cirujano general", "titulo": "Cirujano general" },
+  { "id": 3, "src": "../assets/image/nutricionista.jpg", "alt": "Nutricionista", "titulo": "Nutricionista" },
+  { "id": 4, "src": "../assets/image/gastroenterologa.jpg", "alt": "Gastroenteróloga", "titulo": "Gastroenteróloga" },
+  { "id": 5, "src": "../assets/image/oncologo.jpg", "alt": "Oncólogo", "titulo": "Oncólogo" },
+  { "id": 6, "src": "../assets/image/pediatra.jpg", "alt": "Pediatra", "titulo": "Pediatra" }
+]

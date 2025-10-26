@@ -1,6 +1,8 @@
 import "../assets/css/Home.css";
 import imageninicio from "../assets/image/imageninicio.jpg";
 import React from "react";
+import { Link } from "react-router-dom";
+
 
 export default function Home() {
   return (
@@ -84,6 +86,26 @@ export default function Home() {
             </ul>
           </div>
         </section>
+        <section className="start">
+  <div>
+    <div>
+      <h1>CONÓCENOS</h1>
+    </div>
+
+    <div>
+      <p>
+        "Conéctate con médicos y especialistas desde cualquier lugar.
+        Porque tu salud no espera."
+      </p>
+
+      {/* 🔽 Botón que lleva a la galería */}
+      <Link to="/galeria">
+        <button className="btn-galeria">Ver galería</button>
+      </Link>
+    </div>
+  </div>
+</section>
+
       </main>
     </>
   );
