@@ -7,7 +7,7 @@ import Somos from "./pages/Somos";
 import Mision from "./pages/Mision";
 import Contacto from "./pages/Contacto";
 import Galeria from "./components/galeria"; // 👈 nuevo import
-import ProgramarCitas from "./components/AgendarCitas";
+import ProgramarCitas from "./components/ProgramarCitas";
 
 export default function App() {
   return (
@@ -19,7 +19,7 @@ export default function App() {
         <Route path="/mision" element={<Mision />} />
         <Route path="/contacto" element={<Contacto />} />
         <Route path="/galeria" element={<Galeria />} /> {/* 👈 nueva ruta */}
-        <Route path="/agendar" element={<AgendarCitas/>} />
+        <Route path="/agendar" element={<ProgramarCitas/>} />
       </Routes>
       <Footer />
     </Router>

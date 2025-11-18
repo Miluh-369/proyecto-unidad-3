@@ -110,14 +110,13 @@ export default function Home() {
         <h1>Programar cita 😷 </h1>
         </div>
 
-          <div>
-            <p>Haga click para programar su cita</p>
+        <div>
+          <p>Haga click para programar su cita</p>
 
-            <Link to="/agendar">
-              <button className="btn-agendar">Agendar</button>
-            </Link>
+          <button className="btn-agendar">Agendar</button>
+    
 
-          </div>
+        </div>
     </div>
 </section>
 
