@@ -4,6 +4,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 
+
 export default function Home() {
   return (
     <>
@@ -104,6 +105,20 @@ export default function Home() {
       </Link>
     </div>
   </div>
+    <div>
+      <div>
+        <h1>Programar cita 😷 </h1>
+        </div>
+
+          <div>
+            <p>Haga click para programar su cita</p>
+
+            <Link to="/agendar">
+              <button className="btn-agendar">Agendar</button>
+            </Link>
+
+          </div>
+    </div>
 </section>
 
       </main>
