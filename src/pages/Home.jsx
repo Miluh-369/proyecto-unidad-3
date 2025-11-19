@@ -113,7 +113,9 @@ export default function Home() {
         <div>
           <p>Haga click para programar su cita</p>
 
-          <button className="btn-agendar">Agendar</button>
+          <Link to="/agendar">
+            <button className="btn-agendar">Agendar</button>
+          </Link>
     
 
         </div>
