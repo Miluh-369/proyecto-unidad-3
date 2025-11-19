@@ -10,7 +10,6 @@ import Contacto from "./pages/Contacto";
 import Galeria from "./components/galeria"; // 👈 nuevo import
 import ProgramarCitas from "./components/ProgramarCitas";
 import RequireAuth from "./components/RequireAuth";
-import Login from "./pages/Login";
 
 export default function App() {
   return (
