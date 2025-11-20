@@ -1,11 +1,20 @@
+import React from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { useAuth } from "../context/AuthContext";
 import "../assets/css/Home.css";
 import imageninicio from "../assets/image/imageninicio.jpg";
-import React from "react";
-import { Link } from "react-router-dom";
-
-
 
 export default function Home() {
+  const { signInWithGoogle } = useAuth();
+  const navigate = useNavigate();
+
+  const handleAgendar = async () => {
+    const user = await signInWithGoogle();
+    if (user) {
+      navigate("/agendar"); // redirige cuando el login es exitoso
+    }
+  };
+
   return (
     <>
       <section>
@@ -38,7 +47,7 @@ export default function Home() {
 
           <div className="texto">
             <p>
-              ¡Hola! 👋 Bienvenido a JELTIFY Aquí la salud es simple: hablas con
+              ¡Hola! 👋 Bienvenido a JELTIFY. Aquí la salud es simple: hablas con
               un médico desde tu celular, recibes tu receta en segundos y llevas
               tu historial clínico siempre contigo. Sin filas, sin estrés, sin
               complicaciones… solo tú cuidando de ti, fácil y rápido.
@@ -57,9 +66,7 @@ export default function Home() {
               consultas generales y especializadas, recetas electrónicas,
               seguimiento de tratamientos y acceso a tu historial clínico en un
               solo lugar. Nuestro objetivo es acercar la salud a todos,
-              reduciendo tiempos de espera y eliminando barreras geográficas,
-              para que recibir atención médica sea tan fácil como abrir una
-              app.🩺
+              reduciendo tiempos de espera y eliminando barreras geográficas.
             </p>
           </div>
         </section>
@@ -67,61 +74,57 @@ export default function Home() {
         <section className="target">
           <div>
             <p>Características:</p>
-
             <ul>
-              <li>Teleconsultas en tiempo</li>
-              <li>Telediagnóstico y seguimiento de pacientes</li>
-              <li>Monitoreo remoto de pacientes</li>
-              <li>Acceso a registros médicos electrónicos</li>
+              <li>Teleconsultas en tiempo real</li>
+              <li>Telediagnóstico y seguimiento</li>
+              <li>Monitoreo remoto</li>
+              <li>Registros médicos electrónicos</li>
             </ul>
           </div>
 
           <div>
             <p>Ventajas:</p>
-
             <ul>
-              <li>Acceso ampliado a la atención médica especializada</li>
-              <li>Reducción de costos y tiempos de espera</li>
-              <li>Mayor eficiencia y calidad en la atención médica</li>
-              <li>Mayor comodidad y flexibilidad para los pacientes</li>
+              <li>Acceso ampliado a atención especializada</li>
+              <li>Reducción de costos y tiempos</li>
+              <li>Mayor eficiencia en la atención</li>
+              <li>Más comodidad para los pacientes</li>
             </ul>
           </div>
         </section>
+
         <section className="start">
-  <div>
-    <div>
-      <h1>CONÓCENOS</h1>
-    </div>
+          <div>
+            <div>
+              <h1>CONÓCENOS</h1>
+            </div>
 
-    <div>
-      <p>
-        "Conéctate con médicos y especialistas desde cualquier lugar.
-        Porque tu salud no espera."
-      </p>
+            <div>
+              <p>
+                "Conéctate con médicos y especialistas desde cualquier lugar.
+                Porque tu salud no espera."
+              </p>
 
-      {/* 🔽 Botón que lleva a la galería */}
-      <Link to="/galeria">
-        <button className="btn-galeria">Ver galería</button>
-      </Link>
-    </div>
-  </div>
-    <div>
-      <div>
-        <h1>Programar cita 😷 </h1>
-        </div>
+              <Link to="/galeria">
+                <button className="btn-galeria">Ver galería</button>
+              </Link>
+            </div>
+          </div>
 
-        <div>
-          <p>Haga click para programar su cita</p>
+          <div>
+            <div>
+              <h1>Programar cita 😷</h1>
+            </div>
 
-          <Link to="/agendar">
-            <button className="btn-agendar">Agendar</button>
-          </Link>
-    
+            <div>
+              <p>Haga click para programar su cita</p>
 
-        </div>
-    </div>
-</section>
-
+              <button className="btn-agendar" onClick={handleAgendar}>
+                Agendar
+              </button>
+            </div>
+          </div>
+        </section>
       </main>
     </>
   );

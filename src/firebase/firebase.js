@@ -1,20 +1,18 @@
 import { initializeApp } from "firebase/app";
-import {getFirestore} from "firebase/firestore";
 import { getAuth, GoogleAuthProvider } from "firebase/auth";
+import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCLOcn181TsSA30YSde-0S-n0s3mrWO3iU",
-  authDomain: "proyecto-final-4-f5894.firebaseapp.com",
-  projectId: "proyecto-final-4-f5894",
-  storageBucket: "proyecto-final-4-f5894.firebasestorage.app",
-  messagingSenderId: "465447700496",
-  appId: "1:465447700496:web:984655da025ef523b56295"
+  apiKey: "AIzaSyANhq1GQWuzfIhilpshVO0ENueLiosMF5c",
+  authDomain: "jeltify-2fd12.firebaseapp.com",
+  projectId: "jeltify-2fd12",
+  storageBucket: "jeltify-2fd12.firebasestorage.app",
+  messagingSenderId: "435118881000",
+  appId: "1:435118881000:web:72727161aff3bbdd01b15d"
 };
 
 const app = initializeApp(firebaseConfig);
 
-export const db = getFirestore(app);
-
 export const auth = getAuth(app);
-
 export const Gprovider = new GoogleAuthProvider();
+export const db = getFirestore(app);
