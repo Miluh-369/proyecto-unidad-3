@@ -11,12 +11,13 @@ export default function Home() {
   const handleAgendar = async () => {
     const user = await signInWithGoogle();
     if (user) {
-      navigate("/agendar"); // redirige cuando el login es exitoso
+      navigate("/agendar"); // Redirige cuando el login es exitoso
     }
   };
 
   return (
     <>
+      {/* Sección principal */}
       <section>
         <div className="principal">
           <h1>Inicio</h1>
@@ -25,14 +26,15 @@ export default function Home() {
       </section>
 
       <main>
-        <section className="start">
+        {/* Bienvenida */}
+        <section className="start text-center py-10">
           <div>
             <div>
-              <h1>BIENVENIDOS A JELTIFY</h1>
+              <h1 className="text-3xl font-bold mb-2">BIENVENIDOS A JELTIFY</h1>
             </div>
 
             <div>
-              <p>
+              <p className="text-gray-700">
                 "Conéctate con médicos y especialistas desde cualquier lugar.
                 Porque tu salud no espera."
               </p>
@@ -40,12 +42,13 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="info">
-          <div className="mainimg">
-            <img src={imageninicio} alt="imagen relacionada a la salud" />
+        {/* Info */}
+        <section className="info flex flex-col md:flex-row items-center gap-6 my-10">
+          <div className="mainimg md:w-1/2">
+            <img src={imageninicio} alt="imagen relacionada a la salud" className="rounded-lg shadow-md"/>
           </div>
 
-          <div className="texto">
+          <div className="texto md:w-1/2 text-gray-700">
             <p>
               ¡Hola! 👋 Bienvenido a JELTIFY. Aquí la salud es simple: hablas con
               un médico desde tu celular, recibes tu receta en segundos y llevas
@@ -55,8 +58,9 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="medio">
-          <h1>JELTIFY</h1>
+        {/* Medio */}
+        <section className="medio my-10 text-gray-700">
+          <h1 className="text-2xl font-bold mb-4">JELTIFY</h1>
 
           <div>
             <p>
@@ -71,10 +75,11 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="target">
+        {/* Características y ventajas */}
+        <section className="target my-10 flex flex-col md:flex-row gap-6 text-gray-700">
           <div>
-            <p>Características:</p>
-            <ul>
+            <p className="font-semibold mb-2">Características:</p>
+            <ul className="list-disc ml-5">
               <li>Teleconsultas en tiempo real</li>
               <li>Telediagnóstico y seguimiento</li>
               <li>Monitoreo remoto</li>
@@ -83,8 +88,8 @@ export default function Home() {
           </div>
 
           <div>
-            <p>Ventajas:</p>
-            <ul>
+            <p className="font-semibold mb-2">Ventajas:</p>
+            <ul className="list-disc ml-5">
               <li>Acceso ampliado a atención especializada</li>
               <li>Reducción de costos y tiempos</li>
               <li>Mayor eficiencia en la atención</li>
@@ -93,36 +98,32 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="start">
-          <div>
-            <div>
-              <h1>CONÓCENOS</h1>
-            </div>
+        {/* Conócenos y Agendar */}
+        <section className="start my-10 flex flex-col md:flex-row gap-10">
+          <div className="text-center md:w-1/2">
+            <h1 className="text-2xl font-bold mb-2">CONÓCENOS</h1>
+            <p className="text-gray-700 mb-4">
+              "Conéctate con médicos y especialistas desde cualquier lugar.
+              Porque tu salud no espera."
+            </p>
 
-            <div>
-              <p>
-                "Conéctate con médicos y especialistas desde cualquier lugar.
-                Porque tu salud no espera."
-              </p>
-
-              <Link to="/galeria">
-                <button className="btn-galeria">Ver galería</button>
-              </Link>
-            </div>
+            <Link to="/galeria">
+              <button className="btn-galeria bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded transition">
+                Ver galería
+              </button>
+            </Link>
           </div>
 
-          <div>
-            <div>
-              <h1>Programar cita 😷</h1>
-            </div>
+          <div className="text-center md:w-1/2">
+            <h1 className="text-2xl font-bold mb-2">Programar cita 😷</h1>
+            <p className="text-gray-700 mb-4">Haga click para programar su cita</p>
 
-            <div>
-              <p>Haga click para programar su cita</p>
-
-              <button className="btn-agendar" onClick={handleAgendar}>
-                Agendar
-              </button>
-            </div>
+            <button
+              onClick={handleAgendar}
+              className="btn-agendar bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded transition"
+            >
+              Agendar
+            </button>
           </div>
         </section>
       </main>

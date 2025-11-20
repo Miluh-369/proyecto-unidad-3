@@ -1,15 +1,26 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import { AuthProvider } from "./context/AuthContext";
+import { AuthProvider, useAuth } from "./context/AuthContext";
 
 import Home from "./pages/Home";
 import Somos from "./pages/Somos";
 import Mision from "./pages/Mision";
 import Contacto from "./pages/Contacto";
-import Galeria from "./components/galeria"; // 👈 nuevo import
+import Galeria from "./components/galeria";
 import ProgramarCitas from "./components/ProgramarCitas";
 import RequireAuth from "./components/RequireAuth";
+
+// Componente que decide la vista según el rol del usuario
+function ProtectedAgendar() {
+  const { user } = useAuth();
+
+  if (!user) return <Home />; // Usuario no logueado: mostramos Home
+
+  // Redirigir según rol
+  return user.role === "integrante" ? <ProgramarCitas /> : <ProgramarCitas />;
+  // Aquí puedes crear un componente diferente para "cliente" si quieres
+}
 
 export default function App() {
   return (
@@ -21,8 +32,12 @@ export default function App() {
           <Route path="/somos" element={<Somos />} />
           <Route path="/mision" element={<Mision />} />
           <Route path="/contacto" element={<Contacto />} />
-          <Route path="/galeria" element={<Galeria />} /> {/* 👈 nueva ruta */}
-          <Route path="/agendar" element={<RequireAuth><ProgramarCitas/></RequireAuth>} />
+          <Route path="/galeria" element={<Galeria />} />
+          <Route path="/agendar" element={
+            <RequireAuth>
+              <ProtectedAgendar />
+            </RequireAuth>
+          } />
         </Routes>
         <Footer />
       </AuthProvider>
