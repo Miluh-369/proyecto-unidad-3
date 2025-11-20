@@ -1,18 +1,14 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { useAuth } from "../context/AuthContext";
 import "../assets/css/Home.css";
 import imageninicio from "../assets/image/imageninicio.jpg";
 
 export default function Home() {
-  const { signInWithGoogle } = useAuth();
   const navigate = useNavigate();
 
-  const handleAgendar = async () => {
-    const user = await signInWithGoogle();
-    if (user) {
-      navigate("/agendar"); // Redirige cuando el login es exitoso
-    }
+  // Redirige directamente a la página de agendar
+  const handleAgendar = () => {
+    navigate("/agendar");
   };
 
   return (
@@ -27,14 +23,13 @@ export default function Home() {
 
       <main>
         {/* Bienvenida */}
-        <section className="start text-center py-10">
+        <section className="start">
           <div>
             <div>
-              <h1 className="text-3xl font-bold mb-2">BIENVENIDOS A JELTIFY</h1>
+              <h1>BIENVENIDOS A JELTIFY</h1>
             </div>
-
             <div>
-              <p className="text-gray-700">
+              <p>
                 "Conéctate con médicos y especialistas desde cualquier lugar.
                 Porque tu salud no espera."
               </p>
@@ -42,13 +37,12 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Info */}
-        <section className="info flex flex-col md:flex-row items-center gap-6 my-10">
-          <div className="mainimg md:w-1/2">
-            <img src={imageninicio} alt="imagen relacionada a la salud" className="rounded-lg shadow-md"/>
+        {/* Información sobre la plataforma */}
+        <section className="info">
+          <div className="mainimg">
+            <img src={imageninicio} alt="imagen relacionada a la salud" />
           </div>
-
-          <div className="texto md:w-1/2 text-gray-700">
+          <div className="texto">
             <p>
               ¡Hola! 👋 Bienvenido a JELTIFY. Aquí la salud es simple: hablas con
               un médico desde tu celular, recibes tu receta en segundos y llevas
@@ -59,9 +53,8 @@ export default function Home() {
         </section>
 
         {/* Medio */}
-        <section className="medio my-10 text-gray-700">
-          <h1 className="text-2xl font-bold mb-4">JELTIFY</h1>
-
+        <section className="medio">
+          <h1>JELTIFY</h1>
           <div>
             <p>
               🩺 Es una plataforma de telemedicina que conecta a pacientes con
@@ -76,20 +69,19 @@ export default function Home() {
         </section>
 
         {/* Características y ventajas */}
-        <section className="target my-10 flex flex-col md:flex-row gap-6 text-gray-700">
+        <section className="target">
           <div>
-            <p className="font-semibold mb-2">Características:</p>
-            <ul className="list-disc ml-5">
+            <p>Características:</p>
+            <ul>
               <li>Teleconsultas en tiempo real</li>
               <li>Telediagnóstico y seguimiento</li>
               <li>Monitoreo remoto</li>
               <li>Registros médicos electrónicos</li>
             </ul>
           </div>
-
           <div>
-            <p className="font-semibold mb-2">Ventajas:</p>
-            <ul className="list-disc ml-5">
+            <p>Ventajas:</p>
+            <ul>
               <li>Acceso ampliado a atención especializada</li>
               <li>Reducción de costos y tiempos</li>
               <li>Mayor eficiencia en la atención</li>
@@ -99,31 +91,32 @@ export default function Home() {
         </section>
 
         {/* Conócenos y Agendar */}
-        <section className="start my-10 flex flex-col md:flex-row gap-10">
-          <div className="text-center md:w-1/2">
-            <h1 className="text-2xl font-bold mb-2">CONÓCENOS</h1>
-            <p className="text-gray-700 mb-4">
-              "Conéctate con médicos y especialistas desde cualquier lugar.
-              Porque tu salud no espera."
-            </p>
-
-            <Link to="/galeria">
-              <button className="btn-galeria bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded transition">
-                Ver galería
-              </button>
-            </Link>
+        <section className="start">
+          <div>
+            <div>
+              <h1>CONÓCENOS</h1>
+            </div>
+            <div>
+              <p>
+                "Conéctate con médicos y especialistas desde cualquier lugar.
+                Porque tu salud no espera."
+              </p>
+              <Link to="/galeria">
+                <button className="btn-galeria">Ver galería</button>
+              </Link>
+            </div>
           </div>
 
-          <div className="text-center md:w-1/2">
-            <h1 className="text-2xl font-bold mb-2">Programar cita 😷</h1>
-            <p className="text-gray-700 mb-4">Haga click para programar su cita</p>
-
-            <button
-              onClick={handleAgendar}
-              className="btn-agendar bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded transition"
-            >
-              Agendar
-            </button>
+          <div>
+            <div>
+              <h1>Programar cita 😷</h1>
+            </div>
+            <div>
+              <p>Haga click para programar su cita</p>
+              <button className="btn-agendar" onClick={handleAgendar}>
+                Agendar
+              </button>
+            </div>
           </div>
         </section>
       </main>
