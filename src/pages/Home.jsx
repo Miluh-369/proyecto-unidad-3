@@ -1,22 +1,19 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { useAuth } from "../context/AuthContext";
 import "../assets/css/Home.css";
 import imageninicio from "../assets/image/imageninicio.jpg";
 
 export default function Home() {
-  const { signInWithGoogle } = useAuth();
   const navigate = useNavigate();
 
-  const handleAgendar = async () => {
-    const user = await signInWithGoogle();
-    if (user) {
-      navigate("/agendar"); // redirige cuando el login es exitoso
-    }
+  // Redirige directamente a la página de agendar
+  const handleAgendar = () => {
+    navigate("/agendar");
   };
 
   return (
     <>
+      {/* Sección principal */}
       <section>
         <div className="principal">
           <h1>Inicio</h1>
@@ -25,12 +22,12 @@ export default function Home() {
       </section>
 
       <main>
+        {/* Bienvenida */}
         <section className="start">
           <div>
             <div>
               <h1>BIENVENIDOS A JELTIFY</h1>
             </div>
-
             <div>
               <p>
                 "Conéctate con médicos y especialistas desde cualquier lugar.
@@ -40,11 +37,11 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Información sobre la plataforma */}
         <section className="info">
           <div className="mainimg">
             <img src={imageninicio} alt="imagen relacionada a la salud" />
           </div>
-
           <div className="texto">
             <p>
               ¡Hola! 👋 Bienvenido a JELTIFY. Aquí la salud es simple: hablas con
@@ -55,9 +52,9 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Medio */}
         <section className="medio">
           <h1>JELTIFY</h1>
-
           <div>
             <p>
               🩺 Es una plataforma de telemedicina que conecta a pacientes con
@@ -71,6 +68,7 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Características y ventajas */}
         <section className="target">
           <div>
             <p>Características:</p>
@@ -81,7 +79,6 @@ export default function Home() {
               <li>Registros médicos electrónicos</li>
             </ul>
           </div>
-
           <div>
             <p>Ventajas:</p>
             <ul>
@@ -93,18 +90,17 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Conócenos y Agendar */}
         <section className="start">
           <div>
             <div>
               <h1>CONÓCENOS</h1>
             </div>
-
             <div>
               <p>
                 "Conéctate con médicos y especialistas desde cualquier lugar.
                 Porque tu salud no espera."
               </p>
-
               <Link to="/galeria">
                 <button className="btn-galeria">Ver galería</button>
               </Link>
@@ -115,10 +111,8 @@ export default function Home() {
             <div>
               <h1>Programar cita 😷</h1>
             </div>
-
             <div>
               <p>Haga click para programar su cita</p>
-
               <button className="btn-agendar" onClick={handleAgendar}>
                 Agendar
               </button>
