@@ -9,7 +9,6 @@ import Mision from "./pages/Mision";
 import Contacto from "./pages/Contacto";
 import Galeria from "./components/galeria"; // 👈 nuevo import
 import ProgramarCitas from "./components/ProgramarCitas";
-import RequireAuth from "./components/RequireAuth";
 
 export default function App() {
   return (
@@ -22,7 +21,7 @@ export default function App() {
           <Route path="/mision" element={<Mision />} />
           <Route path="/contacto" element={<Contacto />} />
           <Route path="/galeria" element={<Galeria />} /> {/* 👈 nueva ruta */}
-          <Route path="/agendar" element={<RequireAuth><ProgramarCitas/></RequireAuth>} />
+          <Route path="/agendar" element={<ProgramarCitas/>} />
         </Routes>
         <Footer />
       </AuthProvider>
