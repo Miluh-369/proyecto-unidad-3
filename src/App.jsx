@@ -9,7 +9,7 @@ import Mision from "./pages/Mision";
 import Contacto from "./pages/Contacto";
 import Galeria from "./components/galeria";
 import ProgramarCitas from "./components/ProgramarCitas";
-import Promociones from "./pages/Promociones";
+import Promociones from "./components/Promociones";
 
 // Componente que decide la vista según el rol del usuario
 function ProtectedAgendar() {
@@ -33,15 +33,14 @@ export default function App() {
           <Route path="/mision" element={<Mision />} />
           <Route path="/contacto" element={<Contacto />} />
           <Route path="/galeria" element={<Galeria />} />
-          <Route path="/agendar" element={
-            <RequireAuth>
-              <ProtectedAgendar />
-            </RequireAuth>
-          } />
-          <Route path="/Promociones" element={<Promociones />} />
+          <Route path="/agendar" element={<ProtectedAgendar />} />
+
+          <Route path="/promociones" element={<Promociones />} />
         </Routes>
         <Footer />
       </AuthProvider>
     </Router>
   );
 }
+
+
