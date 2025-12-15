@@ -9,6 +9,7 @@ import Mision from "./pages/Mision";
 import Contacto from "./pages/Contacto";
 import Galeria from "./components/galeria";
 import ProgramarCitas from "./components/ProgramarCitas";
+import Promociones from "./pages/Promociones";
 
 // Componente que decide la vista según el rol del usuario
 function ProtectedAgendar() {
@@ -37,6 +38,7 @@ export default function App() {
               <ProtectedAgendar />
             </RequireAuth>
           } />
+          <Route path="/Promociones" element={<Promociones />} />
         </Routes>
         <Footer />
       </AuthProvider>
