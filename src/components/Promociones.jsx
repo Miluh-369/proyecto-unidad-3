@@ -1,7 +1,6 @@
-import promocion1 from "../assets/promocion.jpeg";
-import promocion2 from "../assets/promocion2.jpeg";
-
-import "../assets/css/Promociones.css"; 
+import promocion1 from "../assets/image/promocion.jpeg";
+import promocion2 from "../assets/image/promocion2.jpeg";
+import "./Promociones.css";
 
 
 const promociones = [
