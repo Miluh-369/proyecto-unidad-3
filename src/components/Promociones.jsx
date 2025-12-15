@@ -1,4 +1,4 @@
-import promocion1 from "../assets/promocion1.jpg";
+import promocion1 from "../assets/promocion.jpeg";
 import promocion2 from "../assets/promocion2.jpeg";
 
 import "../assets/css/Promociones.css"; 
