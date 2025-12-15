@@ -118,21 +118,6 @@ export default function Home() {
               </button>
             </div>
           </div>
-          
-          <div className="promo-home">
-  <div>
-    <h1>Promociones 💥</h1>
-  </div>
-
-  <div>
-    <p>No te pierdas nuestras ofertas especiales por tiempo limitado</p>
-    <button className="btn-promos" onClick={handlePromociones}>
-      Ver promociones
-    </button>
-  </div>
-</div>
-    
-
         </section>
       </main>
     </>

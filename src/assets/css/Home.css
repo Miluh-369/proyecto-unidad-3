@@ -315,25 +315,3 @@ button {
   transform: scale(1.05);
 }
 
-.promo-home {
-  margin: 40px auto;
-  padding: 30px;
-  text-align: center;
-  background: #f9f9f9;
-  border-radius: 12px;
-}
-
-.btn-promos {
-  margin-top: 15px;
-  padding: 10px 25px;
-  background-color: #ff5a5f;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  font-size: 16px;
-}
-
-.btn-promos:hover {
-  background-color: #e0484d;
-}
