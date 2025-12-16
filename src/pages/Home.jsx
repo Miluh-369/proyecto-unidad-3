@@ -118,6 +118,19 @@ export default function Home() {
               </button>
             </div>
           </div>
+
+            <div>
+            <div>
+              <h1>PROMOCIONES</h1>
+            </div>
+            <div>
+              <p>Haga click para ver las promociones que ofrece Jealtify</p>
+              <button className="btn-promociones" onClick={handlePromociones}>
+                Agendar
+              </button>
+            </div>
+          </div>
+
         </section>
       </main>
     </>

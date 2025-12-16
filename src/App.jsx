@@ -35,7 +35,8 @@ export default function App() {
           <Route path="/galeria" element={<Galeria />} />
           <Route path="/agendar" element={<ProtectedAgendar />} />
 
-          <Route path="/promociones" element={<Promociones />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/promociones" element={<Promociones />} />
         </Routes>
         <Footer />
       </AuthProvider>
