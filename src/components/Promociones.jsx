@@ -1,5 +1,8 @@
 import promocion1 from "../assets/image/promocion.jpeg";
 import promocion2 from "../assets/image/promocion2.jpeg";
+import promocion3 from "../assets/image/promocion3.png";
+import promocion4 from "../assets/image/promocion4.png";
+
 import "../assets/css/Promociones.css";
 
 
@@ -16,7 +19,22 @@ const promociones = [
     titulo: "Chequeo médico general",
     descripcion:
       "Evaluación completa para prevenir y cuidar tu salud.",
-    detalle: "20% de descuento"
+    detalle: "50% de descuento"
+  },
+   {
+    img: promocion3,
+    titulo: "Chequeo Pedriatrico",
+    descripcion:
+      "Evaluación completa para prevenir y cuidar la salud de tus niños.",
+    detalle: "con el 35% de descuento y 45% de descuento en consultas dobles"
+  },
+
+  {
+    img: promocion4,
+    titulo: "Chequeo Familiar",
+    descripcion:
+      "Evaluación completa para prevenir y cuidar la salud de tu familia.",
+    detalle: "con el 30% de descuento y 45% de descuento en consultas con mas de 5 miembros de la familia"
   }
 ];
 
