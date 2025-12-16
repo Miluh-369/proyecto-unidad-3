@@ -10,6 +10,9 @@ export default function Home() {
   const handleAgendar = () => {
     navigate("/agendar");
   };
+  const handlePromociones = () => {
+    navigate("/promociones");
+  };
 
   return (
     <>
@@ -126,7 +129,7 @@ export default function Home() {
             <div>
               <p>Haga click para ver las promociones que ofrece Jealtify</p>
               <button className="btn-promociones" onClick={handlePromociones}>
-                Agendar
+                Promociones 
               </button>
             </div>
           </div>
@@ -135,4 +138,4 @@ export default function Home() {
       </main>
     </>
   );
-}
+  }
