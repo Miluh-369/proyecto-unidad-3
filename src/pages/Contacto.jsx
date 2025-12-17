@@ -89,7 +89,7 @@ export default function Contacto() {
           <p>Dirección: Calle 123, Los Olivos, Lima</p>
 
           <section>
-            <h1>Solicitud de Consulta</h1>
+            <h1>Quejas o consultas</h1>
 
             <form id="consultaform" onSubmit={handleSubmit}>
               <label htmlFor="nombre">Nombre completo:</label>
@@ -133,7 +133,7 @@ export default function Contacto() {
               <textarea
                 id="mensaje"
                 name="mensaje"
-                placeholder="Escribe tu consulta aquí..."
+                placeholder="Escriba el motivo de su queja o consulta aquí..."
                 required
               ></textarea>
 
