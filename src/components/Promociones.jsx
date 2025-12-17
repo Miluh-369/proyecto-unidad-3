@@ -2,6 +2,8 @@ import promocion1 from "../assets/image/promocion.jpeg";
 import promocion2 from "../assets/image/promocion2.jpeg";
 import promocion3 from "../assets/image/promocion3.png";
 import promocion4 from "../assets/image/promocion4.png";
+import promocion5 from "../assets/image/promocion5.png";
+import promocion6 from "../assets/image/promocion6.png";
 
 import "../assets/css/Promociones.css";
 
@@ -35,6 +37,21 @@ const promociones = [
     descripcion:
       "Evaluación completa para prevenir y cuidar la salud de tu familia.",
     detalle: "con el 30% de descuento y 45% de descuento en consultas con mas de 5 miembros de la familia"
+  },
+   {
+    img: promocion5,
+    titulo: "Descuento en chequeo cardiológico",
+    descripcion:
+      "Evaluación completa para prevenir y cuidar de tu salud.",
+    detalle: "con el 36% de descuento"
+  },
+
+   {
+    img: promocion6,
+    titulo: "Descuento en chequeo oncológico",
+    descripcion:
+      "Evaluación completa para prevenir y cuidar de tu salud de cualquier tipo de cáncer.",
+    detalle: "con el 45% de descuento"
   }
 ];
 
